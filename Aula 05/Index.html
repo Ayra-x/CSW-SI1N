@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <h1>PRINCIPAIS FORMATAÇÕES</h1>
+    <h2><b>NEGRITO</b>/<strong>DESTAQUE</strong></h2>
+    Na fase temos uma parte de texto em <b>NEGRITO</b> usando a atg B (não semantica) <br>
+    Na frase temos uma parte de texto em <strong>NEGRITO</strong> usando strong (com semantica) <br><hr>
+    <h2>ITÁLICO / ÊNFASE</h2>
+    Nesta frase temos uma parte de texto em <i>ITÁLICO</i> usando a tag i (não semantica) <br>
+    Nesta frase temos uma parte de texto em <em>ITÁLICO</em> usano em (com semantica) <hr>
+    <h2>TEXTO MARCADOR</h2>
+    Aqui vamos usar um texto com destaque de <mark>marcador de texto</mark> mark <br>
+    Aqui vamos usar um texto com destaque de <mark style="background:red">marcador de texto</mark> mark <hr>
+    <h2>TEXTO GRANDE E PEQUENO</h2>
+    Estamos trabalhando aqui com <big>TEXTO GRANDE</big> e <small>texto pequeno</small> <hr>
+    <h2>TEXTO DELETADO</h2>
+    Neste paragrafo vamos trabalhar com um texto <del>que foi deletado</del> <hr>
+    <h2>TEXTO INSERIDO</h2>
+    Nesta frase vamos demonstrar um texto <ins>que foi inserido</ins><hr>
+    <h2>TEXTO SUBSCRITO</h2>
+    Vamos demonstrar uma formula de equação do segundo grau ax<sup>2</sup>+ bx c = 0<hr>
+    <h2>TRECHO CODIGO FONTE</h2>
+     Neste exemplo vou demonstrar um treho de codigo fonte <br>
+     <pre><code>import pandas as pd
+        import numpy as np
+        
+        def remove_outlier(df_old):
+            # Copia o DataFrame original para evitar modificar o original diretamente
+            df = df_old.copy()
+            
+            # Calcula o Z-Score de cada valor nas colunas numéricas
+            from scipy.stats import zscore
+            
+            # Aplica o zscore apenas nas colunas numéricas
+            num_cols = df.select_dtypes(include=np.number).columns
+            
+            # Calcula o Z-Score para cada coluna numérica
+            z_scores = np.abs(zscore(df[num_cols]))
+            
+            # Cria uma máscara para filtrar os outliers (valores com Z-Score maior que 3)
+            mask = (z_scores < 3).all(axis=1)
+            
+            # Aplica a máscara no DataFrame
+            df_cleaned = df[mask]
+            
+            return df_cleaned
+        </code></pre><br><hr>
+        <h2>CITAÇÕES (QUOTATION) SIMPLES</h2>
+        Segunde Steve Jobs <blockquote>A tecnologia move o mundo</blockquote><br><hr>
+        <h2>CITAÇÕES COMPLETAS (LIVROS)</h2>
+        <blockquote>Os livros são propriedade intelectual. Se está escrevendo uma dissertação, artigo ou trabalho de qualquer tipo e precisa referenciar ou citar um livro</blockquote><br><hr>
+        <h2>ABREVIAÇÕES</h2>
+        Estamos estudando <abbr>HTML</abbr> e <abbr>CSS</abbr><br><hr>
+        <h2>TEXTO INVERTIDO</h2>
+        Estou estudando <abbr>HTML</abbr><br><hr>
+        Estou estudando <bdo dir="rtl"<abbr>HTML</abbr></bdo>
+
+        
+
+
+
+     
+
+
+
+
+
+
+</body>
+</html>
