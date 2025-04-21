@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #faf8f8;
+      padding: 1rem 0;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #010101;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ccc;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #111;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #fff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ccc;
+    }
+
+    .mensagem {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #0f0;
+    }
+
+    .erro {
+      color: #f00;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contato</h1>
+    <form id="form-contato">
+      <label for="nome">Nome Completo:
+        <input type="text" id="nome" name="nome">
+      </label>
+
+      <label for="telefone">Telefone:
+        <input type="tel" id="telefone" name="telefone">
+      </label>
+
+      <label for="email">Email:
+        <input type="email" id="email" name="email">
+      </label>
+
+      <label for="tipo">Pessoa:
+        <select id="tipo" name="tipo">
+          <option value="fisica">Física</option>
+          <option value="juridica">Jurídica</option>
+        </select>
+      </label>
+
+      <label for="horario">Melhor horário para contato:
+        <input type="text" id="horario" name="horario">
+      </label>
+
+      <label for="servico">Tipo de serviço:
+        <input type="text" id="servico" name="servico">
+      </label>
+
+      <label for="descricao">Descrição:
+        <textarea id="descricao" name="descricao" rows="5"></textarea>
+      </label>
+
+      <input type="submit" value="Enviar">
+    </form>
+    <div id="mensagem" class="mensagem"></div>
+  </main>
+
+  <script>
+    const form = document.getElementById('form-contato');
+    const mensagem = document.getElementById('mensagem');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Pega os valores
+      const nome = form.nome.value.trim();
+      const telefone = form.telefone.value.trim();
+      const email = form.email.value.trim();
+      const horario = form.horario.value.trim();
+      const servico = form.servico.value.trim();
+      const descricao = form.descricao.value.trim();
+
+      if (!nome || !telefone || !email || !horario || !servico || !descricao) {
+        mensagem.textContent = "Por favor, preencha todos os campos.";
+        mensagem.classList.add("erro");
+        return;
+      }
+
+      // Aqui você pode integrar com backend futuramente
+
+      // Mensagem de sucesso
+      mensagem.textContent = "Mensagem enviada com sucesso!";
+      mensagem.classList.remove("erro");
+
+      // Limpa o formulário
+      form.reset();
+    });
+  </script>
+</body>
+</html>

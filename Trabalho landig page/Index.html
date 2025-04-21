@@ -1,0 +1,194 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Ayra</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #000101;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: rgb(0, 0, 0);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #000000;
+    }
+
+    main {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    main h1 {
+      font-size: 2.5rem;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    #home {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fefefe;
+      border-top: 2px solid #eee;
+    }
+
+    #home h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .perfil {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #000405;
+      box-shadow: 0 8px 15px rgba(3, 3, 5, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeIn 1.5s ease forwards;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .perfil:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hobbies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .card {
+      background-color: #080808;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      background-color: #000000;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto 20px;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 5px 0;
+    }
+
+    audio, iframe {
+      margin: 20px auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="typed-text">Bem Vindo ao meu Site</h1>
+    <p><strong>É a página principal. Aqui você pode conhecer um pouco mais sobre minha trajetória pessoal, acadêmica e profissional.</strong> </p>
+  </main>
+
+  <section id="home">
+    <h2>Sobre Mim</h2>
+    <img src="imagem/foto ayra.jpeg" alt="Minha Foto" class="perfil">
+    <p><strong>Olá eu sou Ayra, estudante de desenvolvimento para web na Universidade de Vila Velha. Amo tecnologia e estou curtindo muito fazer essa página! Está sendo desafiador, mas estou crescendo muito.</strong> </p>
+
+    <p><strong> Alguns dos meus hobbies são:</strong></p>
+<!--Essa forma ao invés de usar lista eu consigo deixar meus hibbies organizados em cards-->
+    <div class="hobbies">
+      <div class="card">🏐 Jogar vôlei</div>
+      <div class="card">🏀 Assistir basquete</div>
+      <div class="card">🃏 Jogar truco</div>
+      <div class="card">🎧 Ouvir músicas</div>
+      <div class="card">🎬 Assistir filmes</div>
+    </div>
+
+    <p><strong>Você pode ouvir a música que eu mais ouço no momento:</strong></p>
+    <audio controls>
+      <source src="./audio/Alok ft Alan Walker-Headlights.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+
+    <p><strong>Assista um vídeo sobre a jogadora de basquete que eu amo:</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LWHV9hbXewA?si=cptLMxqmmNkPFrfC" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </section>
+</body>
+</html>

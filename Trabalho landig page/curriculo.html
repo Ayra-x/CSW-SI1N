@@ -1,0 +1,167 @@
+<!-- curriculo.html -->
+<<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Ayra</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000;
+      color: #040000;
+    }
+
+    header {
+      background-color: #f3f0f0;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #000000;
+      font-size: 2.2rem;
+      margin: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #f6f3f3;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #00090b;
+      border-bottom: 2px solid #000101;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    .info p span {
+      font-weight: bold;
+      color: #000607;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    .foto {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #f8fbfc;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 0 12px rgba(0, 204, 255, 0.3);
+    }
+
+    .nome {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #000000;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Currículo</h1>
+    <nav>
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="imagem/foto ayra.jpeg" alt="Foto de Ayra" class="foto">
+    <div class="nome">Ayra Alves</div>
+
+    <div class="info">
+      <p><span>Email:</span> ayraroberta12@gmail.com</p>
+      <p><span>Telefone:</span> (27) 9 9654-2091</p>
+      <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/ayra-alves-65ab02198/?trk=public-profile-join-page" target="_blank"> Linedin Ayra</a></p>
+      <p><span>GitHub:</span><a href="https://github.com/Ayra-x" target="_blank"> Github Ayra</a></p>
+    </div>
+
+    <h2>Objetivo</h2>
+    <p>Atuar como desenvolvedora web front-end, aplicando meus conhecimentos em tecnologias modernas e contribuindo com soluções criativas e funcionais.</p>
+
+    <h2>Formação Acadêmica</h2>
+    <p><strong>Universidade de Vila Velha (UVV)</strong><br>
+      Graduação em Sistemas de Informação<br>
+      Previsão de conclusão: 2026</p>
+
+    <h2>Experiência</h2>
+    <p><strong>Projeto Portfólio Web</strong> (2025)<br>
+      Desenvolvimento de uma landing page responsiva utilizando HTML, CSS e integração com mídia digital.</p>
+
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML5 E CSS </li>
+      <li>Design Responsivo e UX básico</li>
+      <li>GitHub</li>
+      <li>Organização e trabalho em equipe</li>
+    </ul>
+
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Português (nativo)</li>
+      <li>Inglês (intermediário)</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
