@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 19</title>
+</head>
+<body>
+    <h1> Mostra a idade</h1>
+    <label for="idade">Digite sua idade</label>
+    <input type="number" id="idade">
+    <button onclick="identificar()">Identificar</button>
+    <p id="resultado"></p>
+
+    <script>
+       function identificar() {
+         var idade = parseInt(document.getElementById("idade").value);
+         var resultado = document.getElementById("resultado");
+
+         if(isNaN(idade)|| idade < 1) {
+            resultado.textContent = "idade Invalida"; 
+         }
+         else if (idade < 10) {
+            resultado.textContent = "É uma criança";
+         }
+         else if (idade < 16) {
+            resultado.textContent = "É adolecente";
+         }
+         else if (idade < 25) {
+            resultado.textContent = "É um jovem";
+         }
+         else if (idade < 60) {
+            resultado.textContent = "É uma Adulto";
+         }
+         else if (idade > 59) {
+            resultado.textContent = "É um idoso";
+         }
+         else {
+            resultado.textContent = "Idade invalida";
+         }
+         
+       }
+
+
+    </script>
+</body>
+</html>
